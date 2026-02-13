@@ -1,0 +1,2 @@
+name = "dot-dot"
+pages_build_output_dir = "./dist"
