@@ -1,0 +1,621 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========== NAVIGATION ========== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #c0c0c0;
+  border-bottom: 4px solid #000;
+  border-top: 4px solid #000;
+}
+
+.nav-logo {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000;
+  text-shadow: 2px 2px 0 #fff;
+  image-rendering: pixelated;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 1rem;
+  background: #e0e0e0;
+  border: 3px solid #000;
+  display: block;
+}
+
+.nav-links a:hover {
+  background: #ff6b9d;
+  color: #fff;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: #d4d4d4;
+  border-bottom: 8px solid #000;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #c0c0c0 0px,
+      #c0c0c0 4px,
+      transparent 4px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #c0c0c0 0px,
+      #c0c0c0 4px,
+      transparent 4px,
+      transparent 8px
+    );
+  opacity: 0.3;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 10;
+  max-width: 800px;
+  padding: 2rem;
+  background: #e0e0e0;
+  border: 6px solid #000;
+}
+
+.hero-title {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  color: #000;
+  text-shadow: 3px 3px 0 #fff;
+  line-height: 1.4;
+  image-rendering: pixelated;
+}
+
+.hero-subtitle {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 2rem;
+  border: 4px solid #000;
+  background: #fff;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.btn-primary {
+  background: #6b9dff;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: #5080e0;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #ff6b9d;
+  color: #000;
+}
+
+.btn-secondary:hover {
+  background: #e05080;
+  color: #fff;
+}
+
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.floating-cube {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 4px solid #000;
+  background: #a0a0a0;
+}
+
+.floating-cube:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  background: #6b9dff;
+}
+
+.floating-cube:nth-child(2) {
+  top: 60%;
+  right: 15%;
+  background: #ff6b9d;
+}
+
+.floating-cube:nth-child(3) {
+  bottom: 15%;
+  left: 20%;
+  background: #b380ff;
+}
+
+/* ========== GAME SHOWCASE SECTION ========== */
+.games-section {
+  padding: 6rem 2rem;
+  position: relative;
+  background: #e8e8e8;
+  border-top: 8px solid #000;
+  border-bottom: 8px solid #000;
+}
+
+.section-title {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  color: #000;
+  text-shadow: 3px 3px 0 #fff;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 4px;
+  background: #000;
+  margin: 1.5rem auto;
+}
+
+.section-subtitle {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 0.7rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+.games-carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.game-card {
+  background: #c0c0c0;
+  border: 5px solid #000;
+  padding: 1.5rem;
+  min-height: 380px;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-card:hover {
+  background: #d0d0d0;
+}
+
+.game-image {
+  width: 100%;
+  height: 300px;
+  background: #808080;
+  border: 4px solid #000;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #000;
+}
+
+.game-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 核心属性：等比例缩放并填充，多余部分自动裁剪 */
+  display: block;
+}
+
+.game-title {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+.game-description {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 0.65rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.game-tags {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.game-tag {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 3px solid #000;
+  background: #b380ff;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.game-tag:hover {
+  background: #a060e0;
+  color: #fff;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.carousel-btn {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #000;
+  background: #fff;
+  color: #000;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-family: "Press Start 2P", "Courier New", monospace;
+}
+
+.carousel-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.carousel-dot {
+  width: 16px;
+  height: 16px;
+  border: 3px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background: #000;
+}
+
+/* ========== COMMUNITY SECTION ========== */
+.community-section {
+  padding: 6rem 2rem;
+  background: #c0c0c0;
+  position: relative;
+  border-top: 8px solid #000;
+  border-bottom: 8px solid #000;
+}
+
+.community-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.community-card {
+  background: #e0e0e0;
+  border: 5px solid #000;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.community-card:hover {
+  background: #d0d0d0;
+}
+
+.community-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.community-card:nth-child(1) .community-icon {
+  color: #6b9dff;
+}
+
+.community-card:nth-child(2) .community-icon {
+  color: #ff6b9d;
+}
+
+.community-card:nth-child(3) .community-icon {
+  color: #b380ff;
+}
+
+.community-card:nth-child(4) .community-icon {
+  color: #ff9d6b;
+}
+
+.community-title {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #000;
+  line-height: 1.5;
+}
+
+.community-description {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 0.65rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.community-stat {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #000;
+}
+
+/* ========== DOWNLOAD SECTION ========== */
+.download-section {
+  padding: 6rem 2rem;
+  position: relative;
+  text-align: center;
+  background: #e8e8e8;
+  border-top: 8px solid #000;
+  border-bottom: 8px solid #000;
+}
+
+.download-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: #d0d0d0;
+  border: 6px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.download-title {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #000;
+  text-shadow: 3px 3px 0 #fff;
+  line-height: 1.5;
+}
+
+.download-description {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.platform-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 0.7rem;
+  font-weight: 400;
+  padding: 1rem 2rem;
+  border: 4px solid #000;
+  background: #b380ff;
+  color: #000;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.platform-btn:hover {
+  background: #a060e0;
+  color: #fff;
+}
+
+.platform-icon {
+  font-size: 1.2rem;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  background: #a0a0a0;
+  border-top: 6px solid #000;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 0.6rem;
+  color: #000;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.social-link {
+  font-size: 1.5rem;
+  color: #000;
+  border: 3px solid #000;
+  background: #e0e0e0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:hover {
+  background: #000;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.6rem;
+  }
+
+  .games-section,
+  .community-section,
+  .download-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .download-buttons {
+    flex-direction: column;
+  }
+}
+
+a:hover,
+button:hover {
+  cursor: none; /* 彻底隐藏光标 */
+}
